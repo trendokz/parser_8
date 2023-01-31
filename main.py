@@ -163,11 +163,9 @@ def google_table(dict_cards):
 def main():
     start_time = datetime.now()
 
-    get_data()
-
-    # schedule.every(40).minutes.do(get_data)
-    # while True:
-    #     schedule.run_pending()
+    schedule.every(35).minutes.do(get_data)
+    while True:
+        schedule.run_pending()
 
     finish_time = datetime.now()
     spent_time = finish_time - start_time
